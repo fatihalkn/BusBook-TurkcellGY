@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DF7D5642C298CD700C950AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5632C298CD700C950AD /* AppDelegate.swift */; };
+		3DF7D5662C298CD700C950AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5652C298CD700C950AD /* SceneDelegate.swift */; };
+		3DF7D56E2C298CD700C950AD /* BusBooking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D56C2C298CD700C950AD /* BusBooking.xcdatamodeld */; };
+		3DF7D5702C298CD900C950AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF7D56F2C298CD900C950AD /* Assets.xcassets */; };
+		3DF7D5732C298CD900C950AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF7D5712C298CD900C950AD /* LaunchScreen.storyboard */; };
+		3DF7D57F2C298DDF00C950AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D57E2C298DDF00C950AD /* HomeViewController.swift */; };
+		3DF7D5842C298FFB00C950AD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5832C298FFB00C950AD /* HomeView.swift */; };
+		3DF7D5862C29AFBE00C950AD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5852C29AFBE00C950AD /* HomeViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3DF7D5602C298CD700C950AD /* BusBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DF7D5632C298CD700C950AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3DF7D5652C298CD700C950AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3DF7D56D2C298CD700C950AD /* BusBooking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BusBooking.xcdatamodel; sourceTree = "<group>"; };
+		3DF7D56F2C298CD900C950AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3DF7D5722C298CD900C950AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3DF7D5742C298CD900C950AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DF7D57E2C298DDF00C950AD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3DF7D5832C298FFB00C950AD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3DF7D5852C29AFBE00C950AD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DF7D55D2C298CD700C950AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DF7D5572C298CD700C950AD = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5622C298CD700C950AD /* BusBooking */,
+				3DF7D5612C298CD700C950AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DF7D5612C298CD700C950AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5602C298CD700C950AD /* BusBooking.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DF7D5622C298CD700C950AD /* BusBooking */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D57B2C298DBC00C950AD /* Scene */,
+				3DF7D57A2C298D2000C950AD /* App */,
+				3DF7D56C2C298CD700C950AD /* BusBooking.xcdatamodeld */,
+			);
+			path = BusBooking;
+			sourceTree = "<group>";
+		};
+		3DF7D57A2C298D2000C950AD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5632C298CD700C950AD /* AppDelegate.swift */,
+				3DF7D5652C298CD700C950AD /* SceneDelegate.swift */,
+				3DF7D56F2C298CD900C950AD /* Assets.xcassets */,
+				3DF7D5712C298CD900C950AD /* LaunchScreen.storyboard */,
+				3DF7D5742C298CD900C950AD /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3DF7D57B2C298DBC00C950AD /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D57C2C298DCC00C950AD /* Home */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		3DF7D57C2C298DCC00C950AD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5822C298FEC00C950AD /* Model */,
+				3DF7D5812C298FE500C950AD /* ViewModel */,
+				3DF7D5802C298FE000C950AD /* View */,
+				3DF7D57D2C298DD000C950AD /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3DF7D57D2C298DD000C950AD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D57E2C298DDF00C950AD /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3DF7D5802C298FE000C950AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5832C298FFB00C950AD /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DF7D5812C298FE500C950AD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5852C29AFBE00C950AD /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3DF7D5822C298FEC00C950AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DF7D55F2C298CD700C950AD /* BusBooking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DF7D5772C298CD900C950AD /* Build configuration list for PBXNativeTarget "BusBooking" */;
+			buildPhases = (
+				3DF7D55C2C298CD700C950AD /* Sources */,
+				3DF7D55D2C298CD700C950AD /* Frameworks */,
+				3DF7D55E2C298CD700C950AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BusBooking;
+			productName = BusBooking;
+			productReference = 3DF7D5602C298CD700C950AD /* BusBooking.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DF7D5582C298CD700C950AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					3DF7D55F2C298CD700C950AD = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 3DF7D55B2C298CD700C950AD /* Build configuration list for PBXProject "BusBooking" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3DF7D5572C298CD700C950AD;
+			productRefGroup = 3DF7D5612C298CD700C950AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DF7D55F2C298CD700C950AD /* BusBooking */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DF7D55E2C298CD700C950AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DF7D5732C298CD900C950AD /* LaunchScreen.storyboard in Resources */,
+				3DF7D5702C298CD900C950AD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DF7D55C2C298CD700C950AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DF7D5642C298CD700C950AD /* AppDelegate.swift in Sources */,
+				3DF7D5862C29AFBE00C950AD /* HomeViewModel.swift in Sources */,
+				3DF7D56E2C298CD700C950AD /* BusBooking.xcdatamodeld in Sources */,
+				3DF7D5662C298CD700C950AD /* SceneDelegate.swift in Sources */,
+				3DF7D5842C298FFB00C950AD /* HomeView.swift in Sources */,
+				3DF7D57F2C298DDF00C950AD /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3DF7D5712C298CD900C950AD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DF7D5722C298CD900C950AD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3DF7D5752C298CD900C950AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3DF7D5762C298CD900C950AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DF7D5782C298CD900C950AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 628PNWMZP5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BusBooking/App/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alkanfatih.BusBooking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3DF7D5792C298CD900C950AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 628PNWMZP5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BusBooking/App/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alkanfatih.BusBooking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DF7D55B2C298CD700C950AD /* Build configuration list for PBXProject "BusBooking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DF7D5752C298CD900C950AD /* Debug */,
+				3DF7D5762C298CD900C950AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DF7D5772C298CD900C950AD /* Build configuration list for PBXNativeTarget "BusBooking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DF7D5782C298CD900C950AD /* Debug */,
+				3DF7D5792C298CD900C950AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3DF7D56C2C298CD700C950AD /* BusBooking.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3DF7D56D2C298CD700C950AD /* BusBooking.xcdatamodel */,
+			);
+			currentVersion = 3DF7D56D2C298CD700C950AD /* BusBooking.xcdatamodel */;
+			path = BusBooking.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3DF7D5582C298CD700C950AD /* Project object */;
+}
