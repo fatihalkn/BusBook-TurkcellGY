@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+
 class HomeViewController: UIViewController {
     
     //MARK: - Properties
@@ -27,19 +28,30 @@ class HomeViewController: UIViewController {
     }
     
     func setupDelegate() {
+        homeViewModel.viewDelegate = self
+        
         homeView.boardingCitiesPickerView.delegate = self
         homeView.boardingCitiesPickerView.dataSource = self
         
         homeView.whereAreButtonCitiesPickerView.delegate = self
         homeView.whereAreButtonCitiesPickerView.dataSource = self
+        
+        
     }
     
     func addActions() {
         homeView.boardingFromButton.addTarget(self, action: #selector(boardingFromButtonTapped), for: .touchUpInside)
         homeView.whereAreYouGoingButton.addTarget(self, action: #selector(whereAreYouGoingButtonTapped), for: .touchUpInside)
+        homeView.todayButton.addTarget(self, action: #selector(todayButtonTapped), for: .touchUpInside)
+        homeView.tomorrowButton.addTarget(self, action: #selector(tomorrowButtonTapped), for: .touchUpInside)
         
-      
+        homeView.findBusButton.addTarget(self, action: #selector(findBusButtonTapped), for: .touchUpInside)
         
+        
+    }
+    
+    @objc func findBusButtonTapped() {
+        homeViewModel.findsButtonTapped()
     }
     
     @objc func boardingFromButtonTapped() {
@@ -50,9 +62,19 @@ class HomeViewController: UIViewController {
         homeView.hiddenTextFieldWhereAreButton.becomeFirstResponder()
     }
     
+    @objc func todayButtonTapped() {
+        homeView.datePicker.setDate(Date(), animated: true)
+    }
     
-   
+    @objc func tomorrowButtonTapped() {
+        let today = Date()
+        if let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today) {
+            homeView.datePicker.setDate(tomorrow, animated: true)
+        }
+    }
 }
+
+
 
 //MARK: - UIPickerViewDelegate, UIPickerViewDataSource
 extension HomeViewController: UIPickerViewDataSource, UIPickerViewDelegate {
@@ -97,13 +119,29 @@ extension HomeViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch pickerView {
         case homeView.boardingCitiesPickerView:
-            homeView.boardingFromButton.setTitle(homeViewModel.cities[row], for: .normal)
+            let selectCity = homeViewModel.cities[row]
+            homeView.boardingFromButton.setTitle(selectCity, for: .normal)
+            homeViewModel.fromCityName = selectCity
         case homeView.whereAreButtonCitiesPickerView:
-            homeView.whereAreYouGoingButton.setTitle(homeViewModel.cities[row], for: .normal)
+            let selectCity = homeViewModel.cities[row]
+            homeView.whereAreYouGoingButton.setTitle(selectCity, for: .normal)
+            homeViewModel.goingCityName = selectCity
         default: break
             
         }
-       
+        
     }
 }
 
+extension HomeViewController: HomeViewModelDelegate {
+    func openTicketListController(boardingFromCity: String, goingFromCity: String) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        let date = dateFormatter.string(from: homeView.datePicker.date)
+        let vc = TicketListController()
+        vc.ticketListView.boardFromCityLabel.text = boardingFromCity
+        vc.ticketListView.goingCityLabel.text = goingFromCity
+        vc.ticketListView.calendarLabel.text = date
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}

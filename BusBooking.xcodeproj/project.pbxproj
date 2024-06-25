@@ -15,6 +15,12 @@
 		3DF7D57F2C298DDF00C950AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D57E2C298DDF00C950AD /* HomeViewController.swift */; };
 		3DF7D5842C298FFB00C950AD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5832C298FFB00C950AD /* HomeView.swift */; };
 		3DF7D5862C29AFBE00C950AD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5852C29AFBE00C950AD /* HomeViewModel.swift */; };
+		3DF7D58D2C29F63D00C950AD /* TicketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D58C2C29F63D00C950AD /* TicketListView.swift */; };
+		3DF7D5902C2AEAB300C950AD /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 3DF7D58F2C2AEAB300C950AD /* HorizonCalendar */; };
+		3DF7D5922C2AF84300C950AD /* TicketListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5912C2AF84300C950AD /* TicketListController.swift */; };
+		3DF7D5942C2B046700C950AD /* TicketsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5932C2B046700C950AD /* TicketsCollectionViewCell.swift */; };
+		3DF7D5962C2B3A8400C950AD /* TicketListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5952C2B3A8400C950AD /* TicketListModel.swift */; };
+		3DF7D5982C2B3B1500C950AD /* TicketListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5972C2B3B1500C950AD /* TicketListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,11 @@
 		3DF7D57E2C298DDF00C950AD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3DF7D5832C298FFB00C950AD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3DF7D5852C29AFBE00C950AD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3DF7D58C2C29F63D00C950AD /* TicketListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketListView.swift; sourceTree = "<group>"; };
+		3DF7D5912C2AF84300C950AD /* TicketListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketListController.swift; sourceTree = "<group>"; };
+		3DF7D5932C2B046700C950AD /* TicketsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsCollectionViewCell.swift; sourceTree = "<group>"; };
+		3DF7D5952C2B3A8400C950AD /* TicketListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketListModel.swift; sourceTree = "<group>"; };
+		3DF7D5972C2B3B1500C950AD /* TicketListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF7D5902C2AEAB300C950AD /* HorizonCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +94,7 @@
 		3DF7D57B2C298DBC00C950AD /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				3DF7D5872C29F60D00C950AD /* TicketList */,
 				3DF7D57C2C298DCC00C950AD /* Home */,
 			);
 			path = Scene;
@@ -129,6 +142,50 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3DF7D5872C29F60D00C950AD /* TicketList */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D58B2C29F62C00C950AD /* Model */,
+				3DF7D58A2C29F62200C950AD /* Controller */,
+				3DF7D5892C29F61D00C950AD /* ViewModel */,
+				3DF7D5882C29F61700C950AD /* View */,
+			);
+			path = TicketList;
+			sourceTree = "<group>";
+		};
+		3DF7D5882C29F61700C950AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D58C2C29F63D00C950AD /* TicketListView.swift */,
+				3DF7D5932C2B046700C950AD /* TicketsCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DF7D5892C29F61D00C950AD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5972C2B3B1500C950AD /* TicketListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3DF7D58A2C29F62200C950AD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5912C2AF84300C950AD /* TicketListController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3DF7D58B2C29F62C00C950AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5952C2B3A8400C950AD /* TicketListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +202,9 @@
 			dependencies = (
 			);
 			name = BusBooking;
+			packageProductDependencies = (
+				3DF7D58F2C2AEAB300C950AD /* HorizonCalendar */,
+			);
 			productName = BusBooking;
 			productReference = 3DF7D5602C298CD700C950AD /* BusBooking.app */;
 			productType = "com.apple.product-type.application";
@@ -173,6 +233,9 @@
 				Base,
 			);
 			mainGroup = 3DF7D5572C298CD700C950AD;
+			packageReferences = (
+				3DF7D58E2C2AEAB300C950AD /* XCRemoteSwiftPackageReference "HorizonCalendar" */,
+			);
 			productRefGroup = 3DF7D5612C298CD700C950AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -200,11 +263,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DF7D5642C298CD700C950AD /* AppDelegate.swift in Sources */,
+				3DF7D5922C2AF84300C950AD /* TicketListController.swift in Sources */,
 				3DF7D5862C29AFBE00C950AD /* HomeViewModel.swift in Sources */,
 				3DF7D56E2C298CD700C950AD /* BusBooking.xcdatamodeld in Sources */,
 				3DF7D5662C298CD700C950AD /* SceneDelegate.swift in Sources */,
+				3DF7D5962C2B3A8400C950AD /* TicketListModel.swift in Sources */,
 				3DF7D5842C298FFB00C950AD /* HomeView.swift in Sources */,
+				3DF7D58D2C29F63D00C950AD /* TicketListView.swift in Sources */,
+				3DF7D5982C2B3B1500C950AD /* TicketListViewModel.swift in Sources */,
 				3DF7D57F2C298DDF00C950AD /* HomeViewController.swift in Sources */,
+				3DF7D5942C2B046700C950AD /* TicketsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +414,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 628PNWMZP5;
@@ -355,6 +424,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,6 +432,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alkanfatih.BusBooking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -373,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 628PNWMZP5;
@@ -382,6 +454,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,6 +462,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alkanfatih.BusBooking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -417,6 +491,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3DF7D58E2C2AEAB300C950AD /* XCRemoteSwiftPackageReference "HorizonCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/HorizonCalendar.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3DF7D58F2C2AEAB300C950AD /* HorizonCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DF7D58E2C2AEAB300C950AD /* XCRemoteSwiftPackageReference "HorizonCalendar" */;
+			productName = HorizonCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3DF7D56C2C298CD700C950AD /* BusBooking.xcdatamodeld */ = {

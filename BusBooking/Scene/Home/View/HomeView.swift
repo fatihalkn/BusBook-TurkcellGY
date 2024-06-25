@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+
+
 class HomeView: UIView {
     
     //MARK: - Properties
@@ -78,18 +80,6 @@ class HomeView: UIView {
         return button
     }()
     
-    let otherButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .clear
-        button.layer.borderColor = UIColor.white.cgColor
-        button.layer.borderWidth = 1
-        button.layer.cornerRadius = 10
-        button.setTitle("🗓️", for: .normal)
-        button.titleLabel?.textColor = .white
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
     let findBusButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .homeRed
@@ -148,7 +138,7 @@ class HomeView: UIView {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
-        stackView.spacing = 20
+        stackView.spacing = 5
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -177,7 +167,16 @@ class HomeView: UIView {
         return textField
     }()
     
-    
+    let datePicker: UIDatePicker = {
+        let datePicker = UIDatePicker()
+        datePicker.locale = .autoupdatingCurrent
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .compact
+        datePicker.tintColor = .systemPink
+        datePicker.translatesAutoresizingMaskIntoConstraints = false
+        return datePicker
+    }()
+   
     
     @objc func doneButtonTapped() {
         hiddenTextFieldBoardingButton.resignFirstResponder()
@@ -207,8 +206,8 @@ extension HomeView {
         mainView.addSubview(whereYouWantLabel)
         daysButtonStackView.addArrangedSubview(todayButton)
         daysButtonStackView.addArrangedSubview(tomorrowButton)
-        daysButtonStackView.addArrangedSubview(otherButton)
         rotaSelectionContentView.addSubview(findBusButton)
+        rotaSelectionContentView.addSubview(datePicker)
         rotaSelectionContentView.addSubview(boardingFromButton)
         rotaSelectionContentView.addSubview(whereAreYouGoingButton)
         rotaSelectionContentView.addSubview(daysButtonStackView)
@@ -236,8 +235,8 @@ extension HomeView {
             
             
             rotaSelectionContentView.topAnchor.constraint(equalTo: busImageView.bottomAnchor,constant: 5),
-            rotaSelectionContentView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor,constant: 30),
-            rotaSelectionContentView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -30),
+            rotaSelectionContentView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor,constant: 20),
+            rotaSelectionContentView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
             rotaSelectionContentView.bottomAnchor.constraint(lessThanOrEqualTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
             
             boardingFromButton.topAnchor.constraint(equalTo: rotaSelectionContentView.topAnchor,constant: 25),
@@ -264,7 +263,11 @@ extension HomeView {
             
             daysButtonStackView.topAnchor.constraint(equalTo: whereAreYouGoingButton.bottomAnchor, constant: 10),
             daysButtonStackView.leadingAnchor.constraint(equalTo: rotaSelectionContentView.leadingAnchor, constant: 15),
-            daysButtonStackView.trailingAnchor.constraint(equalTo: rotaSelectionContentView.trailingAnchor, constant: -15),
+            daysButtonStackView.trailingAnchor.constraint(equalTo: datePicker.leadingAnchor, constant: -5),
+            
+            datePicker.centerYAnchor.constraint(equalTo: daysButtonStackView.centerYAnchor),
+            datePicker.trailingAnchor.constraint(equalTo: rotaSelectionContentView.trailingAnchor, constant: -15),
+            datePicker.heightAnchor.constraint(equalTo: daysButtonStackView.heightAnchor),
             
             findBusButton.topAnchor.constraint(equalTo: daysButtonStackView.bottomAnchor, constant: 20),
             findBusButton.leadingAnchor.constraint(equalTo: rotaSelectionContentView.leadingAnchor,constant: 15),
