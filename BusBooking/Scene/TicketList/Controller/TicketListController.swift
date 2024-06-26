@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 
+
 class TicketListController: UIViewController {
     
     //MARK: - Properties
@@ -50,14 +51,24 @@ extension TicketListController: UICollectionViewDelegate,UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TicketsCollectionViewCell.identifier, for: indexPath) as! TicketsCollectionViewCell
-        let data = ticketListViewModel.ankaraToAntalyaTickets[indexPath.row]
+        let data = ticketListViewModel.ankaraToAntalyaTickets[indexPath.item]
         cell.configureTickets(data: data)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellWitdh: CGFloat = (collectionView.frame.width - 30)
-        let cellHeight: CGFloat = (collectionView.frame.height) / 4
+        let cellHeight: CGFloat = (collectionView.frame.height) / 3
         return .init(width: cellWitdh, height: cellHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let data = ticketListViewModel.ankaraToAntalyaTickets[indexPath.item]
+        let vc = SelectSeatViewController()
+        vc.selectSeatView.boardFromCity.text = data.boardFromCity
+        vc.selectSeatView.goingFromCity.text = data.goingFromCity
+        vc.selectSeatView.companyName.text = data.companyName
+        navigationController?.pushViewController(vc, animated: true)
+        dismiss(animated: true, completion: nil)
     }
 }

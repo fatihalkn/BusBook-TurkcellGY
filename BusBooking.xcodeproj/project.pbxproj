@@ -21,6 +21,14 @@
 		3DF7D5942C2B046700C950AD /* TicketsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5932C2B046700C950AD /* TicketsCollectionViewCell.swift */; };
 		3DF7D5962C2B3A8400C950AD /* TicketListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5952C2B3A8400C950AD /* TicketListModel.swift */; };
 		3DF7D5982C2B3B1500C950AD /* TicketListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5972C2B3B1500C950AD /* TicketListViewModel.swift */; };
+		3DF7D59B2C2C32E100C950AD /* ProgresHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D59A2C2C32E100C950AD /* ProgresHUD.swift */; };
+		3DF7D59E2C2C32F600C950AD /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 3DF7D59D2C2C32F600C950AD /* ProgressHUD */; };
+		3DF7D5A02C2C357F00C950AD /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D59F2C2C357F00C950AD /* TabbarViewController.swift */; };
+		3DF7D5A72C2C378400C950AD /* SelectSeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5A62C2C378400C950AD /* SelectSeatView.swift */; };
+		3DF7D5A92C2C379200C950AD /* SelectSeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5A82C2C379200C950AD /* SelectSeatViewController.swift */; };
+		3DF7D5AB2C2C4EB800C950AD /* RightSideCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5AA2C2C4EB800C950AD /* RightSideCollectionCell.swift */; };
+		3DF7D5AD2C2C4ECD00C950AD /* LeftSideCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5AC2C2C4ECD00C950AD /* LeftSideCollectionCell.swift */; };
+		3DF7D5AF2C2C5BCD00C950AD /* SelectSeatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5AE2C2C5BCD00C950AD /* SelectSeatViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +47,13 @@
 		3DF7D5932C2B046700C950AD /* TicketsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsCollectionViewCell.swift; sourceTree = "<group>"; };
 		3DF7D5952C2B3A8400C950AD /* TicketListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketListModel.swift; sourceTree = "<group>"; };
 		3DF7D5972C2B3B1500C950AD /* TicketListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketListViewModel.swift; sourceTree = "<group>"; };
+		3DF7D59A2C2C32E100C950AD /* ProgresHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgresHUD.swift; sourceTree = "<group>"; };
+		3DF7D59F2C2C357F00C950AD /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		3DF7D5A62C2C378400C950AD /* SelectSeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSeatView.swift; sourceTree = "<group>"; };
+		3DF7D5A82C2C379200C950AD /* SelectSeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSeatViewController.swift; sourceTree = "<group>"; };
+		3DF7D5AA2C2C4EB800C950AD /* RightSideCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSideCollectionCell.swift; sourceTree = "<group>"; };
+		3DF7D5AC2C2C4ECD00C950AD /* LeftSideCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSideCollectionCell.swift; sourceTree = "<group>"; };
+		3DF7D5AE2C2C5BCD00C950AD /* SelectSeatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSeatViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DF7D5902C2AEAB300C950AD /* HorizonCalendar in Frameworks */,
+				3DF7D59E2C2C32F600C950AD /* ProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +88,7 @@
 		3DF7D5622C298CD700C950AD /* BusBooking */ = {
 			isa = PBXGroup;
 			children = (
+				3DF7D5992C2C32C600C950AD /* Extantion+UIView */,
 				3DF7D57B2C298DBC00C950AD /* Scene */,
 				3DF7D57A2C298D2000C950AD /* App */,
 				3DF7D56C2C298CD700C950AD /* BusBooking.xcdatamodeld */,
@@ -94,6 +111,7 @@
 		3DF7D57B2C298DBC00C950AD /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				3DF7D5A12C2C373900C950AD /* SelectSeat */,
 				3DF7D5872C29F60D00C950AD /* TicketList */,
 				3DF7D57C2C298DCC00C950AD /* Home */,
 			);
@@ -186,6 +204,59 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3DF7D5992C2C32C600C950AD /* Extantion+UIView */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D59A2C2C32E100C950AD /* ProgresHUD.swift */,
+				3DF7D59F2C2C357F00C950AD /* TabbarViewController.swift */,
+			);
+			path = "Extantion+UIView";
+			sourceTree = "<group>";
+		};
+		3DF7D5A12C2C373900C950AD /* SelectSeat */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5A52C2C375900C950AD /* Model */,
+				3DF7D5A42C2C375000C950AD /* Controller */,
+				3DF7D5A32C2C374800C950AD /* ViewModel */,
+				3DF7D5A22C2C374400C950AD /* View */,
+			);
+			path = SelectSeat;
+			sourceTree = "<group>";
+		};
+		3DF7D5A22C2C374400C950AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5A62C2C378400C950AD /* SelectSeatView.swift */,
+				3DF7D5AA2C2C4EB800C950AD /* RightSideCollectionCell.swift */,
+				3DF7D5AC2C2C4ECD00C950AD /* LeftSideCollectionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DF7D5A32C2C374800C950AD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5AE2C2C5BCD00C950AD /* SelectSeatViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3DF7D5A42C2C375000C950AD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5A82C2C379200C950AD /* SelectSeatViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3DF7D5A52C2C375900C950AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,6 +275,7 @@
 			name = BusBooking;
 			packageProductDependencies = (
 				3DF7D58F2C2AEAB300C950AD /* HorizonCalendar */,
+				3DF7D59D2C2C32F600C950AD /* ProgressHUD */,
 			);
 			productName = BusBooking;
 			productReference = 3DF7D5602C298CD700C950AD /* BusBooking.app */;
@@ -235,6 +307,7 @@
 			mainGroup = 3DF7D5572C298CD700C950AD;
 			packageReferences = (
 				3DF7D58E2C2AEAB300C950AD /* XCRemoteSwiftPackageReference "HorizonCalendar" */,
+				3DF7D59C2C2C32F500C950AD /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 			);
 			productRefGroup = 3DF7D5612C298CD700C950AD /* Products */;
 			projectDirPath = "";
@@ -264,13 +337,20 @@
 			files = (
 				3DF7D5642C298CD700C950AD /* AppDelegate.swift in Sources */,
 				3DF7D5922C2AF84300C950AD /* TicketListController.swift in Sources */,
+				3DF7D59B2C2C32E100C950AD /* ProgresHUD.swift in Sources */,
+				3DF7D5A02C2C357F00C950AD /* TabbarViewController.swift in Sources */,
 				3DF7D5862C29AFBE00C950AD /* HomeViewModel.swift in Sources */,
+				3DF7D5A92C2C379200C950AD /* SelectSeatViewController.swift in Sources */,
+				3DF7D5AD2C2C4ECD00C950AD /* LeftSideCollectionCell.swift in Sources */,
 				3DF7D56E2C298CD700C950AD /* BusBooking.xcdatamodeld in Sources */,
+				3DF7D5AB2C2C4EB800C950AD /* RightSideCollectionCell.swift in Sources */,
+				3DF7D5AF2C2C5BCD00C950AD /* SelectSeatViewModel.swift in Sources */,
 				3DF7D5662C298CD700C950AD /* SceneDelegate.swift in Sources */,
 				3DF7D5962C2B3A8400C950AD /* TicketListModel.swift in Sources */,
 				3DF7D5842C298FFB00C950AD /* HomeView.swift in Sources */,
 				3DF7D58D2C29F63D00C950AD /* TicketListView.swift in Sources */,
 				3DF7D5982C2B3B1500C950AD /* TicketListViewModel.swift in Sources */,
+				3DF7D5A72C2C378400C950AD /* SelectSeatView.swift in Sources */,
 				3DF7D57F2C298DDF00C950AD /* HomeViewController.swift in Sources */,
 				3DF7D5942C2B046700C950AD /* TicketsCollectionViewCell.swift in Sources */,
 			);
@@ -501,6 +581,14 @@
 				kind = branch;
 			};
 		};
+		3DF7D59C2C2C32F500C950AD /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -508,6 +596,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3DF7D58E2C2AEAB300C950AD /* XCRemoteSwiftPackageReference "HorizonCalendar" */;
 			productName = HorizonCalendar;
+		};
+		3DF7D59D2C2C32F600C950AD /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DF7D59C2C2C32F500C950AD /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 
