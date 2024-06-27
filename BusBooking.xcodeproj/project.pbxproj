@@ -29,6 +29,11 @@
 		3DF7D5AB2C2C4EB800C950AD /* RightSideCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5AA2C2C4EB800C950AD /* RightSideCollectionCell.swift */; };
 		3DF7D5AD2C2C4ECD00C950AD /* LeftSideCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5AC2C2C4ECD00C950AD /* LeftSideCollectionCell.swift */; };
 		3DF7D5AF2C2C5BCD00C950AD /* SelectSeatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5AE2C2C5BCD00C950AD /* SelectSeatViewModel.swift */; };
+		3DF7D5B12C2C9EA200C950AD /* SelectSeatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5B02C2C9EA200C950AD /* SelectSeatsModel.swift */; };
+		3DF7D5B82C2D92B400C950AD /* GuestDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5B72C2D92B400C950AD /* GuestDetailsView.swift */; };
+		3DF7D5BA2C2D998000C950AD /* GuestDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5B92C2D998000C950AD /* GuestDetailsViewController.swift */; };
+		3DF7D5BC2C2DA74F00C950AD /* GuestDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5BB2C2DA74F00C950AD /* GuestDetailViewModel.swift */; };
+		3DF7D5BE2C2DBD2B00C950AD /* NavigationBarExtantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5BD2C2DBD2B00C950AD /* NavigationBarExtantion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,11 @@
 		3DF7D5AA2C2C4EB800C950AD /* RightSideCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSideCollectionCell.swift; sourceTree = "<group>"; };
 		3DF7D5AC2C2C4ECD00C950AD /* LeftSideCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSideCollectionCell.swift; sourceTree = "<group>"; };
 		3DF7D5AE2C2C5BCD00C950AD /* SelectSeatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSeatViewModel.swift; sourceTree = "<group>"; };
+		3DF7D5B02C2C9EA200C950AD /* SelectSeatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSeatsModel.swift; sourceTree = "<group>"; };
+		3DF7D5B72C2D92B400C950AD /* GuestDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDetailsView.swift; sourceTree = "<group>"; };
+		3DF7D5B92C2D998000C950AD /* GuestDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDetailsViewController.swift; sourceTree = "<group>"; };
+		3DF7D5BB2C2DA74F00C950AD /* GuestDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDetailViewModel.swift; sourceTree = "<group>"; };
+		3DF7D5BD2C2DBD2B00C950AD /* NavigationBarExtantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtantion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +121,8 @@
 		3DF7D57B2C298DBC00C950AD /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				3DF7D5BF2C2DC00500C950AD /* MyTickets */,
+				3DF7D5B22C2D927E00C950AD /* GuestDetails */,
 				3DF7D5A12C2C373900C950AD /* SelectSeat */,
 				3DF7D5872C29F60D00C950AD /* TicketList */,
 				3DF7D57C2C298DCC00C950AD /* Home */,
@@ -209,6 +221,7 @@
 			children = (
 				3DF7D59A2C2C32E100C950AD /* ProgresHUD.swift */,
 				3DF7D59F2C2C357F00C950AD /* TabbarViewController.swift */,
+				3DF7D5BD2C2DBD2B00C950AD /* NavigationBarExtantion.swift */,
 			);
 			path = "Extantion+UIView";
 			sourceTree = "<group>";
@@ -253,8 +266,58 @@
 		3DF7D5A52C2C375900C950AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3DF7D5B02C2C9EA200C950AD /* SelectSeatsModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3DF7D5B22C2D927E00C950AD /* GuestDetails */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5B62C2D92A100C950AD /* Model */,
+				3DF7D5B52C2D929800C950AD /* ViewModel */,
+				3DF7D5B42C2D928F00C950AD /* ViewController */,
+				3DF7D5B32C2D928B00C950AD /* View */,
+			);
+			path = GuestDetails;
+			sourceTree = "<group>";
+		};
+		3DF7D5B32C2D928B00C950AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5B72C2D92B400C950AD /* GuestDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DF7D5B42C2D928F00C950AD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5B92C2D998000C950AD /* GuestDetailsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3DF7D5B52C2D929800C950AD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5BB2C2DA74F00C950AD /* GuestDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3DF7D5B62C2D92A100C950AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3DF7D5BF2C2DC00500C950AD /* MyTickets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyTickets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,10 +398,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF7D5BC2C2DA74F00C950AD /* GuestDetailViewModel.swift in Sources */,
+				3DF7D5B12C2C9EA200C950AD /* SelectSeatsModel.swift in Sources */,
 				3DF7D5642C298CD700C950AD /* AppDelegate.swift in Sources */,
+				3DF7D5B82C2D92B400C950AD /* GuestDetailsView.swift in Sources */,
 				3DF7D5922C2AF84300C950AD /* TicketListController.swift in Sources */,
 				3DF7D59B2C2C32E100C950AD /* ProgresHUD.swift in Sources */,
 				3DF7D5A02C2C357F00C950AD /* TabbarViewController.swift in Sources */,
+				3DF7D5BE2C2DBD2B00C950AD /* NavigationBarExtantion.swift in Sources */,
 				3DF7D5862C29AFBE00C950AD /* HomeViewModel.swift in Sources */,
 				3DF7D5A92C2C379200C950AD /* SelectSeatViewController.swift in Sources */,
 				3DF7D5AD2C2C4ECD00C950AD /* LeftSideCollectionCell.swift in Sources */,
@@ -350,6 +417,7 @@
 				3DF7D5842C298FFB00C950AD /* HomeView.swift in Sources */,
 				3DF7D58D2C29F63D00C950AD /* TicketListView.swift in Sources */,
 				3DF7D5982C2B3B1500C950AD /* TicketListViewModel.swift in Sources */,
+				3DF7D5BA2C2D998000C950AD /* GuestDetailsViewController.swift in Sources */,
 				3DF7D5A72C2C378400C950AD /* SelectSeatView.swift in Sources */,
 				3DF7D57F2C298DDF00C950AD /* HomeViewController.swift in Sources */,
 				3DF7D5942C2B046700C950AD /* TicketsCollectionViewCell.swift in Sources */,

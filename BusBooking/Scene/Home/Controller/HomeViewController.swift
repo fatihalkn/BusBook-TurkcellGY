@@ -134,6 +134,10 @@ extension HomeViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 }
 
 extension HomeViewController: HomeViewModelDelegate {
+    func showError(text: String) {
+        homeView.showError(text: text, image: nil, interaction: false, delay: nil)
+    }
+    
     func openTicketListController(boardingFromCity: String, goingFromCity: String) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
@@ -144,4 +148,6 @@ extension HomeViewController: HomeViewModelDelegate {
         vc.ticketListView.calendarLabel.text = date
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    
 }

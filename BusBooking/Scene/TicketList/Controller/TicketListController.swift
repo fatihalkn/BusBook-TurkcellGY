@@ -26,6 +26,7 @@ class TicketListController: UIViewController {
         super.viewDidLoad()
         setupRegister()
         setupDelegate()
+        navigationController?.navigationBar.tintColor = .white
     }
     
     func setupRegister() {

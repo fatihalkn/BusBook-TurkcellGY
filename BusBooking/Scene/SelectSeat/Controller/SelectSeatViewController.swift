@@ -28,13 +28,14 @@ class SelectSeatViewController: UIViewController {
         super.viewDidLoad()
         setupDelegate()
         setupRegister()
+        setupNavigationBarItem()
         selectSeatView.rightSideSeatsCollectionView.reloadData()
         selectSeatView.leftSideSeatsCollectionView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        defaultSelectedSeats()
+        
     }
     
     func setupRegister() {
@@ -52,29 +53,19 @@ class SelectSeatViewController: UIViewController {
         selectSeatView.leftSideSeatsCollectionView.delegate = self
     }
     
-    func defaultSelectedSeats() {
-        let selectedRightIndexPaths: [IndexPath] = [IndexPath(item: 0, section: 0),
-                                                    IndexPath(item: 5, section: 0),
-                                                    IndexPath(item: 11, section: 0)]
-        
-        let selectedLeftIndexPaths: [IndexPath] = [IndexPath(item: 9, section: 0),
-                                                   IndexPath(item: 6, section: 0),
-                                                   IndexPath(item: 1, section: 0)]
-        
-        DispatchQueue.main.async {
-            for indexPath in selectedRightIndexPaths {
-                if let rightCell = self.selectSeatView.rightSideSeatsCollectionView.cellForItem(at: indexPath) as? RightSideCollectionCell {
-                    rightCell.isSelected = true
-                    rightCell.rightSeatsView.backgroundColor = .homeRed
-                }
-            }
-
-            for indexPath in selectedLeftIndexPaths {
-                if let leftCell = self.selectSeatView.leftSideSeatsCollectionView.cellForItem(at: indexPath) as? LeftSideCollectionCell {
-                    leftCell.isSelected = true
-                    leftCell.leftSeatsView.backgroundColor = .homeRed
-                }
-            }
+    func setupNavigationBarItem() {
+        let nextButton = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(nextButtonTapped))
+        navigationItem.rightBarButtonItem = nextButton
+        navigationController?.navigationBar.tintColor = .white
+    }
+    
+    @objc func nextButtonTapped() {
+        let vc = GuestDetailsViewController()
+        if selectSeatCount == 0 {
+            selectSeatView.showError(text: "En az bir adet koltuk seçimi yapmalısınız.", image: nil, interaction: false, delay: 2)
+        } else {
+            vc.navigationItem.title = selectSeatView.companyName.text
+            navigationController?.pushViewController(vc, animated: true)
         }
         
     }
@@ -85,9 +76,9 @@ extension SelectSeatViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case selectSeatView.rightSideSeatsCollectionView:
-            return 12
+            return selectSeatViewModel.rightSeatNumbers.count
         case selectSeatView.leftSideSeatsCollectionView:
-            return 12
+            return selectSeatViewModel.leftSeatNumbers.count
         default:
             break
         }
@@ -99,9 +90,24 @@ extension SelectSeatViewController: UICollectionViewDelegate, UICollectionViewDa
         switch collectionView {
         case selectSeatView.rightSideSeatsCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RightSideCollectionCell.identifier, for: indexPath) as! RightSideCollectionCell
+            let data = selectSeatViewModel.rightSeatNumbers[indexPath.item].number
+            if selectSeatViewModel.reservedRightSeats.contains(where: { $0.number == data }) {
+                cell.rightSeatsView.backgroundColor = .homeRed
+            } else {
+                cell.rightSeatsView.backgroundColor = .mainGray
+            }
+            cell.rightSeatsNumbers.text = data
+            
             return cell
         case selectSeatView.leftSideSeatsCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LeftSideCollectionCell.identifier, for: indexPath) as! LeftSideCollectionCell
+            let data = selectSeatViewModel.leftSeatNumbers[indexPath.item].number
+            if selectSeatViewModel.reservedLeftSeats.contains(where: { $0.number == data }) {
+                cell.leftSeatsView.backgroundColor = .homeRed
+            } else {
+                cell.leftSeatsView.backgroundColor = .mainGray
+            }
+            cell.leftSeatsNumbers.text = data
             return cell
         default:
             break
@@ -126,32 +132,65 @@ extension SelectSeatViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if selectSeatCount >= maxSelectSeatCount {
-            selectSeatView.showError(text: "En fazla 5 koltuk seçebilirsiniz.", image: nil, interaction: false, delay: 1.5)
-        return
-        }
+        
         switch collectionView {
         case selectSeatView.rightSideSeatsCollectionView:
+            let currentSelectedRightSeat = selectSeatViewModel.rightSeatNumbers[indexPath.item]
             let cell = collectionView.cellForItem(at: indexPath) as! RightSideCollectionCell
-            if cell.rightSeatsView.backgroundColor == .homeRed {
+            if selectSeatViewModel.reservedRightSeats.contains(where: { $0.number == currentSelectedRightSeat.number }) {
                 selectSeatView.showError(text: "Seçmiş olduğunuz koltuk Doludur.", image: nil, interaction: false, delay: 1.5)
             } else {
-                cell.rightSeatsView.backgroundColor = .honeyYellow
-                selectSeatCount += 1
+                if selectSeatViewModel.selectedRightSeats.contains(where: { $0.number == currentSelectedRightSeat.number }) {
+                    cell.rightSeatsView.backgroundColor = .mainGray
+                    selectSeatCount -= 1
+                    if let removeIndex = selectSeatViewModel.selectedRightSeats.firstIndex(where: { $0.number == currentSelectedRightSeat.number }) {
+                        selectSeatViewModel.selectedRightSeats.remove(at: removeIndex)
+                    }
+                    
+                } else {
+                    if selectSeatCount >= maxSelectSeatCount {
+                        selectSeatView.showError(text: "En fazla 5 koltuk seçebilirsiniz.", image: nil, interaction: false, delay: 1.5)
+                        return
+                    } else {
+                        cell.rightSeatsView.backgroundColor = .honeyYellow
+                        selectSeatCount += 1
+                        selectSeatViewModel.selectedRightSeats.append(currentSelectedRightSeat)
+                    }
+                    
+                }
             }
             
         case selectSeatView.leftSideSeatsCollectionView:
+            let currentSelectedRightSeat = selectSeatViewModel.leftSeatNumbers[indexPath.item]
             let cell = collectionView.cellForItem(at: indexPath) as! LeftSideCollectionCell
-            if cell.leftSeatsView.backgroundColor == .homeRed {
+            if selectSeatViewModel.reservedLeftSeats.contains(where: { $0.number == currentSelectedRightSeat.number }) {
                 selectSeatView.showError(text: "Seçmiş olduğunuz koltuk Doludur.", image: nil, interaction: false, delay: 1.5)
             } else {
-                cell.leftSeatsView.backgroundColor = .honeyYellow
-                selectSeatCount += 1
+                if selectSeatViewModel.selectedLeftSeats.contains(where: { $0.number == currentSelectedRightSeat.number }) {
+                    cell.leftSeatsView.backgroundColor = .mainGray
+                    selectSeatCount -= 1
+                    if let removeIndex = selectSeatViewModel.selectedLeftSeats.firstIndex(where: { $0.number == currentSelectedRightSeat.number }) {
+                        selectSeatViewModel.selectedLeftSeats.remove(at: removeIndex)
+                    }
+                    
+                } else {
+                    if selectSeatCount >= maxSelectSeatCount {
+                        selectSeatView.showError(text: "En fazla 5 koltuk seçebilirsiniz.", image: nil, interaction: false, delay: 1.5)
+                        return
+                    } else {
+                        cell.leftSeatsView.backgroundColor = .honeyYellow
+                        selectSeatCount += 1
+                        selectSeatViewModel.selectedLeftSeats.append(currentSelectedRightSeat)
+                    }
+                    
+                }
+                
             }
         default:
             break
         }
     }
+    
 }
 
 

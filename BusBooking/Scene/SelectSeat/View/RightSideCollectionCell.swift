@@ -33,6 +33,15 @@ class RightSideCollectionCell: UICollectionViewCell {
         return view
     }()
     
+    let rightSeatsNumbers: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 15, weight: .bold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
+        label.textAlignment = .center
+        return label
+    }()
+    
 }
 
 //MARK: - SetuPUI
@@ -40,12 +49,18 @@ extension RightSideCollectionCell {
     
     func setupUI() {
         addSubview(rightSeatsView)
+        addSubview(rightSeatsNumbers)
         
         NSLayoutConstraint.activate([
             rightSeatsView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             rightSeatsView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             rightSeatsView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            rightSeatsView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor)
+            rightSeatsView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            
+            rightSeatsNumbers.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
+            rightSeatsNumbers.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+            rightSeatsNumbers.heightAnchor.constraint(equalToConstant: 50),
+            rightSeatsNumbers.widthAnchor.constraint(equalToConstant: 50)
         ])
     }
     

@@ -37,6 +37,15 @@ class LeftSideCollectionCell: UICollectionViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+    let leftSeatsNumbers: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 15, weight: .bold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
+        label.textAlignment = .center
+        return label
+    }()
 }
 
 //MARK: - SetuPUI
@@ -44,12 +53,18 @@ extension LeftSideCollectionCell {
     
     func setupUI() {
         addSubview(leftSeatsView)
+        addSubview(leftSeatsNumbers)
         
         NSLayoutConstraint.activate([
             leftSeatsView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             leftSeatsView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             leftSeatsView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            leftSeatsView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor)
+            leftSeatsView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            
+            leftSeatsNumbers.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
+            leftSeatsNumbers.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+            leftSeatsNumbers.heightAnchor.constraint(equalToConstant: 50),
+            leftSeatsNumbers.widthAnchor.constraint(equalToConstant: 50)
         ])
     }
     
