@@ -61,6 +61,7 @@ class SelectSeatViewController: UIViewController {
     
     @objc func nextButtonTapped() {
         let vc = GuestDetailsViewController()
+        vc.guestDetailViewModel.seatsNumbers = selectSeatViewModel.selectedRightSeats
         if selectSeatCount == 0 {
             selectSeatView.showError(text: "En az bir adet koltuk seçimi yapmalısınız.", image: nil, interaction: false, delay: 2)
         } else {
@@ -141,9 +142,10 @@ extension SelectSeatViewController: UICollectionViewDelegate, UICollectionViewDa
                 selectSeatView.showError(text: "Seçmiş olduğunuz koltuk Doludur.", image: nil, interaction: false, delay: 1.5)
             } else {
                 if selectSeatViewModel.selectedRightSeats.contains(where: { $0.number == currentSelectedRightSeat.number }) {
-                    cell.rightSeatsView.backgroundColor = .mainGray
-                    selectSeatCount -= 1
+                    
                     if let removeIndex = selectSeatViewModel.selectedRightSeats.firstIndex(where: { $0.number == currentSelectedRightSeat.number }) {
+                        cell.rightSeatsView.backgroundColor = .mainGray
+                        selectSeatCount -= 1
                         selectSeatViewModel.selectedRightSeats.remove(at: removeIndex)
                     }
                     
@@ -167,9 +169,10 @@ extension SelectSeatViewController: UICollectionViewDelegate, UICollectionViewDa
                 selectSeatView.showError(text: "Seçmiş olduğunuz koltuk Doludur.", image: nil, interaction: false, delay: 1.5)
             } else {
                 if selectSeatViewModel.selectedLeftSeats.contains(where: { $0.number == currentSelectedRightSeat.number }) {
-                    cell.leftSeatsView.backgroundColor = .mainGray
-                    selectSeatCount -= 1
+                    
                     if let removeIndex = selectSeatViewModel.selectedLeftSeats.firstIndex(where: { $0.number == currentSelectedRightSeat.number }) {
+                        cell.leftSeatsView.backgroundColor = .mainGray
+                        selectSeatCount -= 1
                         selectSeatViewModel.selectedLeftSeats.remove(at: removeIndex)
                     }
                     

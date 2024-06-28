@@ -14,6 +14,7 @@ protocol GuestDetailViewModelDelegate {
 
 class GuestDetailViewModel {
     
+    var seatsNumbers: [SelectSeatsModel] = []
     var isMaleChecked = false
     var isFemaleChecked = false
     var guestDetailViewModelDelegate: GuestDetailViewModelDelegate?

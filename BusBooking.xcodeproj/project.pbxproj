@@ -34,6 +34,11 @@
 		3DF7D5BA2C2D998000C950AD /* GuestDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5B92C2D998000C950AD /* GuestDetailsViewController.swift */; };
 		3DF7D5BC2C2DA74F00C950AD /* GuestDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5BB2C2DA74F00C950AD /* GuestDetailViewModel.swift */; };
 		3DF7D5BE2C2DBD2B00C950AD /* NavigationBarExtantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5BD2C2DBD2B00C950AD /* NavigationBarExtantion.swift */; };
+		3DF7D5C22C2E2F1D00C950AD /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5C12C2E2F1D00C950AD /* CoreDataManager.swift */; };
+		3DF7D5C52C2E2FCD00C950AD /* Tickets+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5C32C2E2FCD00C950AD /* Tickets+CoreDataClass.swift */; };
+		3DF7D5C62C2E2FCD00C950AD /* Tickets+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5C42C2E2FCD00C950AD /* Tickets+CoreDataProperties.swift */; };
+		3DF7D5C92C2E314D00C950AD /* MyTicketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5C82C2E314D00C950AD /* MyTicketsViewModel.swift */; };
+		3DF7D5CC2C2E3DB400C950AD /* MyTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5CB2C2E3DB400C950AD /* MyTicketsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +69,11 @@
 		3DF7D5B92C2D998000C950AD /* GuestDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDetailsViewController.swift; sourceTree = "<group>"; };
 		3DF7D5BB2C2DA74F00C950AD /* GuestDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDetailViewModel.swift; sourceTree = "<group>"; };
 		3DF7D5BD2C2DBD2B00C950AD /* NavigationBarExtantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtantion.swift; sourceTree = "<group>"; };
+		3DF7D5C12C2E2F1D00C950AD /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3DF7D5C32C2E2FCD00C950AD /* Tickets+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tickets+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3DF7D5C42C2E2FCD00C950AD /* Tickets+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tickets+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3DF7D5C82C2E314D00C950AD /* MyTicketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsViewModel.swift; sourceTree = "<group>"; };
+		3DF7D5CB2C2E3DB400C950AD /* MyTicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,7 @@
 		3DF7D5622C298CD700C950AD /* BusBooking */ = {
 			isa = PBXGroup;
 			children = (
+				3DF7D5C02C2E2F0900C950AD /* CoreDataManager */,
 				3DF7D5992C2C32C600C950AD /* Extantion+UIView */,
 				3DF7D57B2C298DBC00C950AD /* Scene */,
 				3DF7D57A2C298D2000C950AD /* App */,
@@ -121,6 +132,7 @@
 		3DF7D57B2C298DBC00C950AD /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				3DF7D5CA2C2E3DA200C950AD /* ViewController */,
 				3DF7D5BF2C2DC00500C950AD /* MyTickets */,
 				3DF7D5B22C2D927E00C950AD /* GuestDetails */,
 				3DF7D5A12C2C373900C950AD /* SelectSeat */,
@@ -316,8 +328,35 @@
 		3DF7D5BF2C2DC00500C950AD /* MyTickets */ = {
 			isa = PBXGroup;
 			children = (
+				3DF7D5C72C2E313100C950AD /* MyTicketsViewModel */,
 			);
 			path = MyTickets;
+			sourceTree = "<group>";
+		};
+		3DF7D5C02C2E2F0900C950AD /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5C32C2E2FCD00C950AD /* Tickets+CoreDataClass.swift */,
+				3DF7D5C42C2E2FCD00C950AD /* Tickets+CoreDataProperties.swift */,
+				3DF7D5C12C2E2F1D00C950AD /* CoreDataManager.swift */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		3DF7D5C72C2E313100C950AD /* MyTicketsViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5C82C2E314D00C950AD /* MyTicketsViewModel.swift */,
+			);
+			path = MyTicketsViewModel;
+			sourceTree = "<group>";
+		};
+		3DF7D5CA2C2E3DA200C950AD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7D5CB2C2E3DB400C950AD /* MyTicketsViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,15 +443,20 @@
 				3DF7D5B82C2D92B400C950AD /* GuestDetailsView.swift in Sources */,
 				3DF7D5922C2AF84300C950AD /* TicketListController.swift in Sources */,
 				3DF7D59B2C2C32E100C950AD /* ProgresHUD.swift in Sources */,
+				3DF7D5C62C2E2FCD00C950AD /* Tickets+CoreDataProperties.swift in Sources */,
+				3DF7D5C22C2E2F1D00C950AD /* CoreDataManager.swift in Sources */,
 				3DF7D5A02C2C357F00C950AD /* TabbarViewController.swift in Sources */,
 				3DF7D5BE2C2DBD2B00C950AD /* NavigationBarExtantion.swift in Sources */,
 				3DF7D5862C29AFBE00C950AD /* HomeViewModel.swift in Sources */,
 				3DF7D5A92C2C379200C950AD /* SelectSeatViewController.swift in Sources */,
+				3DF7D5CC2C2E3DB400C950AD /* MyTicketsViewController.swift in Sources */,
 				3DF7D5AD2C2C4ECD00C950AD /* LeftSideCollectionCell.swift in Sources */,
 				3DF7D56E2C298CD700C950AD /* BusBooking.xcdatamodeld in Sources */,
 				3DF7D5AB2C2C4EB800C950AD /* RightSideCollectionCell.swift in Sources */,
 				3DF7D5AF2C2C5BCD00C950AD /* SelectSeatViewModel.swift in Sources */,
+				3DF7D5C92C2E314D00C950AD /* MyTicketsViewModel.swift in Sources */,
 				3DF7D5662C298CD700C950AD /* SceneDelegate.swift in Sources */,
+				3DF7D5C52C2E2FCD00C950AD /* Tickets+CoreDataClass.swift in Sources */,
 				3DF7D5962C2B3A8400C950AD /* TicketListModel.swift in Sources */,
 				3DF7D5842C298FFB00C950AD /* HomeView.swift in Sources */,
 				3DF7D58D2C29F63D00C950AD /* TicketListView.swift in Sources */,

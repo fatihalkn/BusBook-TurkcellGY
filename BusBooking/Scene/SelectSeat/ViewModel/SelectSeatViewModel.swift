@@ -48,10 +48,7 @@ class SelectSeatViewModel {
         .init(number: "1")
     ]
     
-    var selectedRightSeats: [SelectSeatsModel] = [
-
-    ]
-    var selectedLeftSeats: [SelectSeatsModel] = [
-
-    ]
+    var selectedRightSeats: [SelectSeatsModel] = []
+    
+    var selectedLeftSeats: [SelectSeatsModel] = []
 }
