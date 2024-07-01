@@ -29,6 +29,7 @@ class SelectSeatViewController: UIViewController {
         setupDelegate()
         setupRegister()
         setupNavigationBarItem()
+        reservedSeats()
         selectSeatView.rightSideSeatsCollectionView.reloadData()
         selectSeatView.leftSideSeatsCollectionView.reloadData()
     }
@@ -53,6 +54,14 @@ class SelectSeatViewController: UIViewController {
         selectSeatView.leftSideSeatsCollectionView.delegate = self
     }
     
+    func reservedSeats() {
+        if let savetTickets = CoreDataManager.shared.fetchCoreData() {
+            let reservedSeats = savetTickets.compactMap{$0.seatsNumbers as? [Int32] }.flatMap{$0}
+            selectSeatViewModel.reservedRightSeats = selectSeatViewModel.rightSeatNumbers.filter{reservedSeats.contains($0.number) }
+            selectSeatViewModel.reservedLeftSeats = selectSeatViewModel.leftSeatNumbers.filter{reservedSeats.contains($0.number) }
+        }
+    }
+    
     func setupNavigationBarItem() {
         let nextButton = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(nextButtonTapped))
         navigationItem.rightBarButtonItem = nextButton
@@ -61,7 +70,7 @@ class SelectSeatViewController: UIViewController {
     
     @objc func nextButtonTapped() {
         let vc = GuestDetailsViewController()
-        vc.guestDetailViewModel.seatsNumbers = selectSeatViewModel.selectedRightSeats
+        vc.guestDetailViewModel.seatsNumbers = selectSeatViewModel.selectedLeftSeats + selectSeatViewModel.selectedRightSeats
         if selectSeatCount == 0 {
             selectSeatView.showError(text: "En az bir adet koltuk seçimi yapmalısınız.", image: nil, interaction: false, delay: 2)
         } else {
@@ -97,7 +106,7 @@ extension SelectSeatViewController: UICollectionViewDelegate, UICollectionViewDa
             } else {
                 cell.rightSeatsView.backgroundColor = .mainGray
             }
-            cell.rightSeatsNumbers.text = data
+            cell.rightSeatsNumbers.text = "\(data)"
             
             return cell
         case selectSeatView.leftSideSeatsCollectionView:
@@ -108,7 +117,7 @@ extension SelectSeatViewController: UICollectionViewDelegate, UICollectionViewDa
             } else {
                 cell.leftSeatsView.backgroundColor = .mainGray
             }
-            cell.leftSeatsNumbers.text = data
+            cell.leftSeatsNumbers.text = "\(data)"
             return cell
         default:
             break

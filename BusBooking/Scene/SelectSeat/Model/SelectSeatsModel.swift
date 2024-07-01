@@ -8,6 +8,6 @@
 import Foundation
 
 struct SelectSeatsModel {
-    let number: String
+    let number: Int32
     
 }

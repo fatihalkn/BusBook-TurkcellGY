@@ -13,11 +13,11 @@ class CoreDataManager {
     static let shared = CoreDataManager()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    func saveCoreData(mail: String, fullName: String, seatNumbers: String) {
+    func saveCoreData(mail: String, fullName: String, seatNumbers: [Int32]) {
         let ticket = Ticket(context: context)
         ticket.fullName = fullName
         ticket.mail = mail
-        ticket.seatsNumbers = seatNumbers
+        ticket.seatsNumbers = seatNumbers as NSObject
         do {
             try self.context.save()
             print(fullName, mail, seatNumbers)

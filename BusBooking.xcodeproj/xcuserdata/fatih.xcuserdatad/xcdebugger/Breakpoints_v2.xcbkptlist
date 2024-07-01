@@ -7,110 +7,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5B149D03-86B2-475B-846E-281DB9EE44B1"
-            shouldBeEnabled = "Yes"
+            uuid = "42B5E71C-C697-4A68-9B10-225F6A3B92F4"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BusBooking/Scene/GuestDetails/ViewController/GuestDetailsViewController.swift"
+            filePath = "BusBooking/Scene/SelectSeat/Controller/SelectSeatViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "buyButtonTapped()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5B149D03-86B2-475B-846E-281DB9EE44B1 - 4e2231250fe23823"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BusBooking.GuestDetailsViewController.buyButtonTapped() -&gt; ()"
-                  moduleName = "BusBooking"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/BusBooking/BusBooking/Scene/GuestDetails/ViewController/GuestDetailsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "1020">
-               </Location>
-               <Location
-                  uuid = "5B149D03-86B2-475B-846E-281DB9EE44B1 - 4e2231250fe23823"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BusBooking.GuestDetailsViewController.buyButtonTapped() -&gt; ()"
-                  moduleName = "BusBooking"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/BusBooking/BusBooking/Scene/GuestDetails/ViewController/GuestDetailsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "1136">
-               </Location>
-               <Location
-                  uuid = "5B149D03-86B2-475B-846E-281DB9EE44B1 - 4e2231250fe23823"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BusBooking.GuestDetailsViewController.buyButtonTapped() -&gt; ()"
-                  moduleName = "BusBooking"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/BusBooking/BusBooking/Scene/GuestDetails/ViewController/GuestDetailsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "1116">
-               </Location>
-               <Location
-                  uuid = "5B149D03-86B2-475B-846E-281DB9EE44B1 - 4e2231250fe23823"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BusBooking.GuestDetailsViewController.buyButtonTapped() -&gt; ()"
-                  moduleName = "BusBooking"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fatih/Desktop/GITHUB%20/BusBooking/BusBooking/Scene/GuestDetails/ViewController/GuestDetailsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "1120">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AE2E61FF-85F7-4D58-813D-4173323235F5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BusBooking/CoreDataManager/CoreDataManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "fetchCoreData()"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "435F8161-2F63-4598-B4A2-BBB55C326E36"
-            shouldBeEnabled = "Yes"
+            uuid = "A7E64993-F104-490E-A895-AD82664D9755"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BusBooking/CoreDataManager/CoreDataManager.swift"
+            filePath = "BusBooking/Scene/SelectSeat/Controller/SelectSeatViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "fetchCoreData()"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "886CE27C-2BBF-4191-AF98-D061EE68BB9D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusBooking/Scene/SelectSeat/Controller/SelectSeatViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "953A0FBD-7544-4FEE-8116-863066FE0F75"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusBooking/Scene/SelectSeat/Controller/SelectSeatViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9648FD4D-746B-4A4B-9A9E-8EB703692BCA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusBooking/Scene/SelectSeat/Controller/SelectSeatViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "nextButtonTapped()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

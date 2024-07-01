@@ -10,18 +10,18 @@ import Foundation
 class MyTicketsViewModel {
     
     var savedTickets: [Ticket] = []
-    let coreDataManager = CoreDataManager()
     
-    func saveTickets(mail: String, fullName: String, seatNumbers: String) {
-        coreDataManager.saveCoreData(mail: mail, fullName: fullName, seatNumbers: seatNumbers)
+    func saveTickets(mail: String, fullName: String, seatNumbers: [Int32]) {
+        CoreDataManager.shared.saveCoreData(mail: mail, fullName: fullName, seatNumbers: seatNumbers)
     }
     
     func fetchTickets() {
-        guard let ticket = coreDataManager.fetchCoreData() else { return }
-        savedTickets = ticket
+        guard let tickets = CoreDataManager.shared.fetchCoreData() else { return }
+        savedTickets = tickets
     }
     
     func deleteTickets(index: Int) {
-        coreDataManager.deleteCoreData(index: index)
+        CoreDataManager.shared.deleteCoreData(index: index)
+        savedTickets.remove(at: index)
     }
 }

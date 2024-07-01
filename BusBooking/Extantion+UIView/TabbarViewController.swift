@@ -21,7 +21,7 @@ class TabbarViewController: UITabBarController {
     
     private func setupTabs() {
         let home = creatTabs(title: "Home", image: .tabbarHome, vc: HomeViewController())
-        let tickets = creatTabs(title: "Tickets", image: .tabbarTicket, vc: TicketListController())
+        let tickets = creatTabs(title: "Tickets", image: .tabbarTicket, vc: MyTicketsViewController())
         self.setViewControllers([home,tickets], animated: true)
     }
     

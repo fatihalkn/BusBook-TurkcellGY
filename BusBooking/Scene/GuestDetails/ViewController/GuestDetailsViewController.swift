@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
+
 class GuestDetailsViewController: UIViewController {
     
     //MARK: - Properties
     var guestDetailView = GuestDetailsView()
     var guestDetailViewModel =  GuestDetailViewModel()
-    var coreDataManager = CoreDataManager()
     
     
     
@@ -56,10 +56,10 @@ class GuestDetailsViewController: UIViewController {
     
     @objc func buyButtonTapped() {
         print("buyButtonTapped called")
-        let seatNumbers = guestDetailViewModel.seatsNumbers.map { $0.number }.joined(separator: ", ")
+        let seatNumbers = guestDetailViewModel.seatsNumbers.map { $0.number }
         guard let mail = guestDetailView.passengerEmailTextField.text else { return }
         guard let fullName = guestDetailView.passengerFullNameTextField.text else { return }
-        coreDataManager.saveCoreData(mail: mail, fullName: fullName, seatNumbers: seatNumbers)
+        CoreDataManager.shared.saveCoreData(mail: mail, fullName: fullName, seatNumbers: seatNumbers)
         let vc = MyTicketsViewController()
         navigationController?.pushViewController(vc, animated: true)
     }

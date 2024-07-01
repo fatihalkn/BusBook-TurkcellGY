@@ -1,8 +1,8 @@
 //
-//  Tickets+CoreDataClass.swift
+//  Ticket+CoreDataClass.swift
 //  BusBooking
 //
-//  Created by Fatih on 28.06.2024.
+//  Created by Fatih on 1.07.2024.
 //
 //
 
