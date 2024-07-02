@@ -62,7 +62,7 @@ class GuestDetailsView: UIView {
    
     let travellerInformationLabel: UILabel = {
         let label = UILabel()
-        label.text = "Traveller Information"
+        label.text = "Traveller Information".localized()
         label.textColor = .black
         label.font = .systemFont(ofSize: 15, weight: .bold)
         label.textAlignment = .center
@@ -72,7 +72,7 @@ class GuestDetailsView: UIView {
     
     let passengerLabel: UILabel = {
         let label = UILabel()
-        label.text = "Passenger"
+        label.text = "Passenger".localized()
         label.textColor = .black
         label.font = .systemFont(ofSize: 13, weight: .bold)
         label.textAlignment = .center
@@ -83,7 +83,7 @@ class GuestDetailsView: UIView {
     let passengerFullNameTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .mainGray
-        textField.placeholder = "Full Name"
+        textField.placeholder = "Full Name".localized()
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
         textField.leftView = paddingView
         textField.leftViewMode = .always
@@ -94,7 +94,7 @@ class GuestDetailsView: UIView {
     let passengerMobileTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .mainGray
-        textField.placeholder = "Mobile"
+        textField.placeholder = "Mobile".localized()
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
         textField.leftView = paddingView
         textField.leftViewMode = .always
@@ -104,7 +104,7 @@ class GuestDetailsView: UIView {
     
     let contactInformationLabel: UILabel = {
         let label = UILabel()
-        label.text = "Contact Information"
+        label.text = "Contact Information".localized()
         label.textColor = .black
         label.font = .systemFont(ofSize: 15, weight: .bold)
         label.textAlignment = .center
@@ -115,7 +115,7 @@ class GuestDetailsView: UIView {
     let passengerEmailTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .mainGray
-        textField.placeholder = "Email"
+        textField.placeholder = "Email".localized()
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
         textField.leftView = paddingView
         textField.leftViewMode = .always
@@ -126,7 +126,7 @@ class GuestDetailsView: UIView {
     let passengerAgeTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .mainGray
-        textField.placeholder = "Age"
+        textField.placeholder = "Age".localized()
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
         textField.leftView = paddingView
         textField.leftViewMode = .always
@@ -150,14 +150,14 @@ class GuestDetailsView: UIView {
     
     let maleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Male"
+        label.text = "Male".localized()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     let femaleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Female"
+        label.text = "Female".localized()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -184,7 +184,7 @@ class GuestDetailsView: UIView {
         let button = UIButton()
         button.backgroundColor = .homeRed
         button.layer.cornerRadius = 10
-        button.setTitle("Proceed to Book ", for: .normal)
+        button.setTitle("Proceed to Book".localized(), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()

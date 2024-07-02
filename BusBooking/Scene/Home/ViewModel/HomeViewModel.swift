@@ -22,12 +22,12 @@ class HomeViewModel {
     
     func findsButtonTapped() {
         guard let fromCityName, let goingCityName else {
-            viewDelegate?.showError(text: "Hareket edeceğiniz şehiri veya gidilecek şehri seçmediniz lütfen kontrol ediniz.")
+            viewDelegate?.showError(text: "You have not selected your departure city or destination city, please check.".localized())
             return
         }
         
         if fromCityName == goingCityName {
-            viewDelegate?.showError(text: "Hareket edilen şehir ile gidilecek olan şehir aynı olamaz lütfen kontrol ediniz.")
+            viewDelegate?.showError(text: "Please check that the departure city and the destination city cannot be the same.".localized())
             return
         }
             

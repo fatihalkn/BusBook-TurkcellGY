@@ -49,7 +49,7 @@ class TicketListView: UIView {
     
     let selectYourBusLabel: UILabel = {
         let label = UILabel()
-        label.text = "Select your bus!"
+        label.text = "Select your bus!".localized()
         label.textColor = .white
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 20, weight: .semibold)
@@ -59,7 +59,6 @@ class TicketListView: UIView {
     
     let boardFromCityLabel: UILabel = {
         let label = UILabel()
-        label.text = "Ankara"
         label.textColor = .white
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 15, weight: .black)
@@ -69,7 +68,6 @@ class TicketListView: UIView {
     
     let goingCityLabel: UILabel = {
         let label = UILabel()
-        label.text = "Antalya"
         label.textColor = .white
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 15, weight: .black)
@@ -79,7 +77,6 @@ class TicketListView: UIView {
     
     let calendarLabel: UILabel = {
         let label = UILabel()
-        label.text = "12-12-12"
         label.textColor = .white
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 15, weight: .semibold)
@@ -114,6 +111,32 @@ class TicketListView: UIView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
+    
+    lazy var emptyLabal: UILabel = {
+        let label = UILabel()
+        label.text = "There are no flights on the route you selected.".localized()
+        label.textColor = .homeRed
+        label.numberOfLines = 2
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 20)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    func showEmptyStateLabel() {
+        addSubview(emptyLabal)
+        NSLayoutConstraint.activate([
+            emptyLabal.centerYAnchor.constraint(equalTo: ticketListCollectionView.centerYAnchor),
+            emptyLabal.leadingAnchor.constraint(equalTo: ticketListCollectionView.leadingAnchor,constant: 20),
+            emptyLabal.trailingAnchor.constraint(equalTo: ticketListCollectionView.trailingAnchor,constant: -20),
+            emptyLabal.heightAnchor.constraint(equalToConstant: 250)
+
+        ])
+    }
+    
+    func hideEmptyStateLabel() {
+        emptyLabal.removeFromSuperview()
+    }
   
 }
 

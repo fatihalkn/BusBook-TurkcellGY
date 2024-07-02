@@ -42,6 +42,8 @@
 		3DF7D5D82C3300BC00C950AD /* Ticket+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5D62C3300BC00C950AD /* Ticket+CoreDataClass.swift */; };
 		3DF7D5D92C3300BC00C950AD /* Ticket+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5D72C3300BC00C950AD /* Ticket+CoreDataProperties.swift */; };
 		3DF7D5DC2C332BA000C950AD /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3DF7D5DB2C332BA000C950AD /* IQKeyboardManagerSwift */; };
+		3DF7D5DE2C342D1200C950AD /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7D5DD2C342D1200C950AD /* Localized.swift */; };
+		3DF7D5E22C34376F00C950AD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DF7D5E42C34376F00C950AD /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,14 @@
 		3DF7D5D02C32DF8D00C950AD /* MyTicketsListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsListCollectionViewCell.swift; sourceTree = "<group>"; };
 		3DF7D5D62C3300BC00C950AD /* Ticket+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3DF7D5D72C3300BC00C950AD /* Ticket+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3DF7D5DD2C342D1200C950AD /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		3DF7D5DF2C3436E700C950AD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		3DF7D5E32C34376F00C950AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3DF7D5E52C34377500C950AD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3DF7D5E62C343C9000C950AD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		3DF7D5E72C343C9100C950AD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3DF7D5E82C343CAA00C950AD /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		3DF7D5E92C343CAA00C950AD /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +108,6 @@
 		3DF7D5572C298CD700C950AD = {
 			isa = PBXGroup;
 			children = (
-				3DF7D5D62C3300BC00C950AD /* Ticket+CoreDataClass.swift */,
-				3DF7D5D72C3300BC00C950AD /* Ticket+CoreDataProperties.swift */,
 				3DF7D5622C298CD700C950AD /* BusBooking */,
 				3DF7D5612C298CD700C950AD /* Products */,
 			);
@@ -133,6 +141,7 @@
 				3DF7D56F2C298CD900C950AD /* Assets.xcassets */,
 				3DF7D5712C298CD900C950AD /* LaunchScreen.storyboard */,
 				3DF7D5742C298CD900C950AD /* Info.plist */,
+				3DF7D5E42C34376F00C950AD /* Localizable.strings */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -241,6 +250,7 @@
 				3DF7D59A2C2C32E100C950AD /* ProgresHUD.swift */,
 				3DF7D59F2C2C357F00C950AD /* TabbarViewController.swift */,
 				3DF7D5BD2C2DBD2B00C950AD /* NavigationBarExtantion.swift */,
+				3DF7D5DD2C342D1200C950AD /* Localized.swift */,
 			);
 			path = "Extantion+UIView";
 			sourceTree = "<group>";
@@ -345,6 +355,8 @@
 		3DF7D5C02C2E2F0900C950AD /* CoreDataManager */ = {
 			isa = PBXGroup;
 			children = (
+				3DF7D5D62C3300BC00C950AD /* Ticket+CoreDataClass.swift */,
+				3DF7D5D72C3300BC00C950AD /* Ticket+CoreDataProperties.swift */,
 				3DF7D5C12C2E2F1D00C950AD /* CoreDataManager.swift */,
 			);
 			path = CoreDataManager;
@@ -422,6 +434,9 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				fr,
+				tr,
 			);
 			mainGroup = 3DF7D5572C298CD700C950AD;
 			packageReferences = (
@@ -444,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DF7D5732C298CD900C950AD /* LaunchScreen.storyboard in Resources */,
+				3DF7D5E22C34376F00C950AD /* Localizable.strings in Resources */,
 				3DF7D5702C298CD900C950AD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +475,7 @@
 				3DF7D5B12C2C9EA200C950AD /* SelectSeatsModel.swift in Sources */,
 				3DF7D5642C298CD700C950AD /* AppDelegate.swift in Sources */,
 				3DF7D5D92C3300BC00C950AD /* Ticket+CoreDataProperties.swift in Sources */,
+				3DF7D5DE2C342D1200C950AD /* Localized.swift in Sources */,
 				3DF7D5B82C2D92B400C950AD /* GuestDetailsView.swift in Sources */,
 				3DF7D5922C2AF84300C950AD /* TicketListController.swift in Sources */,
 				3DF7D59B2C2C32E100C950AD /* ProgresHUD.swift in Sources */,
@@ -495,8 +512,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				3DF7D5722C298CD900C950AD /* Base */,
+				3DF7D5DF2C3436E700C950AD /* de */,
+				3DF7D5E62C343C9000C950AD /* fr */,
+				3DF7D5E82C343CAA00C950AD /* tr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3DF7D5E42C34376F00C950AD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DF7D5E32C34376F00C950AD /* en */,
+				3DF7D5E52C34377500C950AD /* de */,
+				3DF7D5E72C343C9100C950AD /* fr */,
+				3DF7D5E92C343CAA00C950AD /* tr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -507,6 +538,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -570,6 +602,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

@@ -27,7 +27,9 @@ class TicketListController: UIViewController {
         setupRegister()
         setupDelegate()
         navigationController?.navigationBar.tintColor = .white
+        
     }
+    
     
     func setupRegister() {
         ticketListView.ticketListCollectionView.register(TicketsCollectionViewCell.self, forCellWithReuseIdentifier: TicketsCollectionViewCell.identifier)
@@ -36,17 +38,19 @@ class TicketListController: UIViewController {
     func setupDelegate() {
         ticketListView.ticketListCollectionView.dataSource = self
         ticketListView.ticketListCollectionView.delegate = self
-    }
-    
-    
+    }    
 }
 
 extension TicketListController: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if ticketListView.boardFromCityLabel.text == "Ankara" && ticketListView.goingCityLabel.text == "Antalya" {
             return ticketListViewModel.ankaraToAntalyaTickets.count
+        } else {
+            ticketListView.showEmptyStateLabel()
+            return 0
         }
-        return 0
+        
+        
         
     }
     

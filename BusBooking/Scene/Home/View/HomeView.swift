@@ -62,7 +62,7 @@ class HomeView: UIView {
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.borderWidth = 1
         button.layer.cornerRadius = 10
-        button.setTitle("Today", for: .normal)
+        button.setTitle("Today".localized(), for: .normal)
         button.titleLabel?.textColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -74,7 +74,7 @@ class HomeView: UIView {
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.borderWidth = 1
         button.layer.cornerRadius = 10
-        button.setTitle("Tomorrow", for: .normal)
+        button.setTitle("Tomorrow".localized(), for: .normal)
         button.titleLabel?.textColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -84,7 +84,7 @@ class HomeView: UIView {
         let button = UIButton()
         button.backgroundColor = .homeRed
         button.layer.cornerRadius = 8
-        button.setTitle("Find Buses", for: .normal)
+        button.setTitle("Find Buses".localized(), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -94,7 +94,7 @@ class HomeView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .white
         button.layer.cornerRadius = 10
-        button.setTitle("Boarding From", for: .normal)
+        button.setTitle("Boarding From".localized(), for: .normal)
         button.setTitleColor(.textPruple, for: .normal)
         button.contentHorizontalAlignment = .left
         button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
@@ -106,7 +106,7 @@ class HomeView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .white
         button.layer.cornerRadius = 10
-        button.setTitle("Where are you going?", for: .normal)
+        button.setTitle("Where are you going?".localized(), for: .normal)
         button.contentHorizontalAlignment = .left
         button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
         button.setTitleColor(.textPruple, for: .normal)
@@ -115,8 +115,8 @@ class HomeView: UIView {
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Hey Fatih!"
-        label.font = .systemFont(ofSize: 18, weight: .light)
+        label.text = "Hey Fatih!".localized()
+        label.font = .systemFont(ofSize: 22, weight: .black)
         label.textColor = .white
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -125,8 +125,8 @@ class HomeView: UIView {
     
     let whereYouWantLabel: UILabel = {
         let label = UILabel()
-        label.text = "Where you want go."
-        label.font = .systemFont(ofSize: 15, weight: .semibold)
+        label.text = "Where you want go.".localized()
+        label.font = .systemFont(ofSize: 18, weight: .semibold)
         label.textColor = .white
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -137,7 +137,7 @@ class HomeView: UIView {
     let daysButtonStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.distribution = .fillEqually
+        stackView.distribution = .fill
         stackView.spacing = 5
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
@@ -264,6 +264,9 @@ extension HomeView {
             daysButtonStackView.topAnchor.constraint(equalTo: whereAreYouGoingButton.bottomAnchor, constant: 10),
             daysButtonStackView.leadingAnchor.constraint(equalTo: rotaSelectionContentView.leadingAnchor, constant: 15),
             daysButtonStackView.trailingAnchor.constraint(equalTo: datePicker.leadingAnchor, constant: -5),
+            
+            todayButton.widthAnchor.constraint(equalToConstant: 100),
+            tomorrowButton.widthAnchor.constraint(equalToConstant: 100),
             
             datePicker.centerYAnchor.constraint(equalTo: daysButtonStackView.centerYAnchor),
             datePicker.trailingAnchor.constraint(equalTo: rotaSelectionContentView.trailingAnchor, constant: -15),

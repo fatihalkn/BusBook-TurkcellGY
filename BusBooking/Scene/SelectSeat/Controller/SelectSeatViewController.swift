@@ -63,7 +63,7 @@ class SelectSeatViewController: UIViewController {
     }
     
     func setupNavigationBarItem() {
-        let nextButton = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(nextButtonTapped))
+        let nextButton = UIBarButtonItem(title: "Next".localized(), style: .done, target: self, action: #selector(nextButtonTapped))
         navigationItem.rightBarButtonItem = nextButton
         navigationController?.navigationBar.tintColor = .white
     }
@@ -72,7 +72,7 @@ class SelectSeatViewController: UIViewController {
         let vc = GuestDetailsViewController()
         vc.guestDetailViewModel.seatsNumbers = selectSeatViewModel.selectedLeftSeats + selectSeatViewModel.selectedRightSeats
         if selectSeatCount == 0 {
-            selectSeatView.showError(text: "En az bir adet koltuk seçimi yapmalısınız.", image: nil, interaction: false, delay: 2)
+            selectSeatView.showError(text: "You must choose at least one seat.".localized(), image: nil, interaction: false, delay: 2)
         } else {
             vc.navigationItem.title = selectSeatView.companyName.text
             navigationController?.pushViewController(vc, animated: true)
@@ -148,7 +148,7 @@ extension SelectSeatViewController: UICollectionViewDelegate, UICollectionViewDa
             let currentSelectedRightSeat = selectSeatViewModel.rightSeatNumbers[indexPath.item]
             let cell = collectionView.cellForItem(at: indexPath) as! RightSideCollectionCell
             if selectSeatViewModel.reservedRightSeats.contains(where: { $0.number == currentSelectedRightSeat.number }) {
-                selectSeatView.showError(text: "Seçmiş olduğunuz koltuk Doludur.", image: nil, interaction: false, delay: 1.5)
+                selectSeatView.showError(text: "The seat you selected is occupied.".localized(), image: nil, interaction: false, delay: 1.5)
             } else {
                 if selectSeatViewModel.selectedRightSeats.contains(where: { $0.number == currentSelectedRightSeat.number }) {
                     
@@ -160,7 +160,7 @@ extension SelectSeatViewController: UICollectionViewDelegate, UICollectionViewDa
                     
                 } else {
                     if selectSeatCount >= maxSelectSeatCount {
-                        selectSeatView.showError(text: "En fazla 5 koltuk seçebilirsiniz.", image: nil, interaction: false, delay: 1.5)
+                        selectSeatView.showError(text: "You can choose a maximum of 5 seats.".localized(), image: nil, interaction: false, delay: 1.5)
                         return
                     } else {
                         cell.rightSeatsView.backgroundColor = .honeyYellow
@@ -175,7 +175,7 @@ extension SelectSeatViewController: UICollectionViewDelegate, UICollectionViewDa
             let currentSelectedRightSeat = selectSeatViewModel.leftSeatNumbers[indexPath.item]
             let cell = collectionView.cellForItem(at: indexPath) as! LeftSideCollectionCell
             if selectSeatViewModel.reservedLeftSeats.contains(where: { $0.number == currentSelectedRightSeat.number }) {
-                selectSeatView.showError(text: "Seçmiş olduğunuz koltuk Doludur.", image: nil, interaction: false, delay: 1.5)
+                selectSeatView.showError(text: "The seat you selected is occupied.".localized(), image: nil, interaction: false, delay: 1.5)
             } else {
                 if selectSeatViewModel.selectedLeftSeats.contains(where: { $0.number == currentSelectedRightSeat.number }) {
                     
@@ -187,7 +187,7 @@ extension SelectSeatViewController: UICollectionViewDelegate, UICollectionViewDa
                     
                 } else {
                     if selectSeatCount >= maxSelectSeatCount {
-                        selectSeatView.showError(text: "En fazla 5 koltuk seçebilirsiniz.", image: nil, interaction: false, delay: 1.5)
+                        selectSeatView.showError(text: "You can choose a maximum of 5 seats.".localized(), image: nil, interaction: false, delay: 1.5)
                         return
                     } else {
                         cell.leftSeatsView.backgroundColor = .honeyYellow

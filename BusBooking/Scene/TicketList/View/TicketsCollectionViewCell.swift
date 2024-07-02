@@ -26,7 +26,6 @@ class TicketsCollectionViewCell: UICollectionViewCell {
     
     let boardFromCity: UILabel = {
         let label = UILabel()
-        label.text = "Ankara"
         label.textColor = .black
         label.font = .systemFont(ofSize: 18, weight: .semibold)
         label.textAlignment = .center
@@ -36,7 +35,6 @@ class TicketsCollectionViewCell: UICollectionViewCell {
     
     let goingFromCity: UILabel = {
         let label = UILabel()
-        label.text = "Antalya"
         label.textColor = .black
         label.font = .systemFont(ofSize: 18, weight: .semibold)
         label.textAlignment = .center
@@ -46,7 +44,6 @@ class TicketsCollectionViewCell: UICollectionViewCell {
     
     let companyName: UILabel = {
         let label = UILabel()
-        label.text = "Kamil Koç"
         label.textColor = .black
         label.font = .systemFont(ofSize: 18, weight: .semibold)
         label.textAlignment = .center

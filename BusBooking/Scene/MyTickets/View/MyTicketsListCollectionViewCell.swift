@@ -26,7 +26,6 @@ class MyTicketsListCollectionViewCell: UICollectionViewCell {
     
     let fullName: UILabel = {
         let label = UILabel()
-        label.text = "fatih alkanafafafasdfafafafafafafa"
         label.textColor = .black
         label.font = .systemFont(ofSize: 18, weight: .semibold)
         label.textAlignment = .right
@@ -36,7 +35,7 @@ class MyTicketsListCollectionViewCell: UICollectionViewCell {
     
     let name: UILabel = {
         let label = UILabel()
-        label.text = "İsim: "
+        label.text = "Name: ".localized()
         label.textColor = .black
         label.font = .systemFont(ofSize: 18, weight: .semibold)
         label.textAlignment = .left
@@ -46,7 +45,6 @@ class MyTicketsListCollectionViewCell: UICollectionViewCell {
     
     let mail: UILabel = {
         let label = UILabel()
-        label.text = "fatihalkan0789"
         label.textColor = .black
         label.font = .systemFont(ofSize: 18, weight: .semibold)
         label.textAlignment = .right
@@ -56,7 +54,7 @@ class MyTicketsListCollectionViewCell: UICollectionViewCell {
     
     let mailAdress: UILabel = {
         let label = UILabel()
-        label.text = "Mail: "
+        label.text = "Mail: ".localized()
         label.textColor = .black
         label.font = .systemFont(ofSize: 18, weight: .semibold)
         label.textAlignment = .left
@@ -66,7 +64,6 @@ class MyTicketsListCollectionViewCell: UICollectionViewCell {
     
     let seatNumbers: UILabel = {
         let label = UILabel()
-        label.text = "1"
         label.textColor = .black
         label.font = .systemFont(ofSize: 18, weight: .semibold)
         label.textAlignment = .right
@@ -76,7 +73,7 @@ class MyTicketsListCollectionViewCell: UICollectionViewCell {
     
     let seats: UILabel = {
         let label = UILabel()
-        label.text = "Koltuk Numarası: "
+        label.text = "Seat Number: ".localized()
         label.textColor = .black
         label.font = .systemFont(ofSize: 18, weight: .semibold)
         label.textAlignment = .left

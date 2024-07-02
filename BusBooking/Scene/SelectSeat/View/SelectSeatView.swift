@@ -49,7 +49,6 @@ class SelectSeatView: UIView {
     
     let boardFromCity: UILabel = {
         let label = UILabel()
-        label.text = "Ankara"
         label.textColor = .white
         label.font = .systemFont(ofSize: 22, weight: .semibold)
         label.textAlignment = .center
@@ -59,7 +58,6 @@ class SelectSeatView: UIView {
     
     let goingFromCity: UILabel = {
         let label = UILabel()
-        label.text = "Antalya"
         label.textColor = .white
         label.font = .systemFont(ofSize: 22, weight: .semibold)
         label.textAlignment = .center
@@ -69,7 +67,6 @@ class SelectSeatView: UIView {
     
     let companyName: UILabel = {
         let label = UILabel()
-        label.text = "Kamil Koç"
         label.textColor = .white
         label.font = .systemFont(ofSize: 25, weight: .semibold)
         label.textAlignment = .center
@@ -79,7 +76,7 @@ class SelectSeatView: UIView {
     
     let bookedLabel: UILabel = {
         let label = UILabel()
-        label.text = "Booked"
+        label.text = "Booked".localized()
         label.textColor = .darkGray
         label.font = .systemFont(ofSize: 15, weight: .semibold)
         label.textAlignment = .center
@@ -89,7 +86,7 @@ class SelectSeatView: UIView {
     
     let availableLabel: UILabel = {
         let label = UILabel()
-        label.text = "Available"
+        label.text = "Available".localized()
         label.textColor = .darkGray
         label.font = .systemFont(ofSize: 15, weight: .semibold)
         label.textAlignment = .center
@@ -99,8 +96,9 @@ class SelectSeatView: UIView {
     
     let yourSeatLabel: UILabel = {
         let label = UILabel()
-        label.text = "Your Seat"
+        label.text = "Your Seat".localized()
         label.textColor = .darkGray
+        label.numberOfLines = 2
         label.font = .systemFont(ofSize: 15, weight: .semibold)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -237,7 +235,7 @@ extension SelectSeatView {
             
             yourSeatLabel.topAnchor.constraint(equalTo: seatsView.topAnchor, constant: 15),
             yourSeatLabel.leadingAnchor.constraint(equalTo: yourSeatView.trailingAnchor, constant: 10),
-            yourSeatLabel.trailingAnchor.constraint(lessThanOrEqualTo:seatsView.trailingAnchor, constant: 30),
+            yourSeatLabel.trailingAnchor.constraint(lessThanOrEqualTo:seatsView.trailingAnchor, constant: -30),
             
             driverSteeringImageView.topAnchor.constraint(equalTo: yourSeatLabel.bottomAnchor, constant: 20),
             driverSteeringImageView.trailingAnchor.constraint(equalTo: seatsView.trailingAnchor,constant: -15),
